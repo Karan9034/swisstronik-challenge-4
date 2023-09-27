@@ -1,7 +1,20 @@
 {
   "name": "hardhat-project",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run --network swisstronik scripts/deploy.js",
+    "mint": "hardhat run --network swisstronik scripts/mint.js",
+    "burn": "hardhat run --network swisstronik scripts/burn.js",
+    "transfer": "hardhat run --network swisstronik scripts/transfer.js"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^16.3.1",
     "hardhat": "^2.17.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@swisstronik/swisstronik.js": "^1.0.0"
   }
 }
